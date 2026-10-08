@@ -24,6 +24,9 @@ export default async function healthHandler(req, res) {
       mcpTools: '/api/mcp/tools',
       mcpInvoke: '/api/mcp/invoke',
       mcpProxy: '/api/mcp/proxy',
+      stockflowSearch: '/api/stockflow/search',
+      stockflowCategories: '/api/stockflow/categories',
+      stockflowInvoke: '/api/stockflow/invoke',
     },
     system: {
       nodeVersion: process.version,

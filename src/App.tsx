@@ -391,10 +391,17 @@ export default function App() {
         onClose={() => setIsNotificationsOpen(false)}
       />
 
-      {/* MCP Console Modal (https://mcp.smithery.ai/elmer-meta) */}
+      {/* MCP Console Modal (https://mcp.smithery.ai/elmer-meta & https://github.com/nmediacloud/stockflow-mcp) */}
       <McpConsoleModal
         isOpen={isMcpModalOpen}
         onClose={() => setIsMcpModalOpen(false)}
+        onSelectPhoto={(photoUrl, title) => {
+          addToast(
+            'Stockflow Photo Selected',
+            `Loaded stock asset from Stockflow MCP: ${title.slice(0, 40)}...`,
+            'info'
+          );
+        }}
         onApplyToolResult={(toolName, data) => {
           if (toolName === 'calculate_nutrition_window') {
             setMacros((prev) => ({

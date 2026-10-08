@@ -10,6 +10,9 @@ import apiDirectory, {
   handleMcpTools,
   handleMcpInvoke,
   handleMcpProxy,
+  handleStockflowSearch,
+  handleStockflowCategories,
+  handleStockflowInvoke,
 } from './api/index.js';
 
 dotenv.config();
@@ -39,6 +42,11 @@ app.get('/api/mcp/status', handleMcpStatus);
 app.all('/api/mcp/tools', handleMcpTools);
 app.post('/api/mcp/invoke', handleMcpInvoke);
 app.post('/api/mcp/proxy', handleMcpProxy);
+
+// Stockflow MCP Endpoints (https://github.com/nmediacloud/stockflow-mcp)
+app.all('/api/stockflow/search', handleStockflowSearch);
+app.get('/api/stockflow/categories', handleStockflowCategories);
+app.post('/api/stockflow/invoke', handleStockflowInvoke);
 
 // -------------------------------------------------------------
 // Dev & Production Frontend Serving
