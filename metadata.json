@@ -1,0 +1,6 @@
+{
+  "name": "Kinetic Pulse",
+  "description": "Singapore's premier sports court booking, cloud kitchen nutrition, and post-game recovery platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
